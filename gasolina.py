@@ -4,26 +4,26 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-#carregar os dados do arquivo CSV
+# carregar os dados do arquivo CSV
 df = pd.read_csv('gasolina.csv')
 
-#configurar o estilo do gráfico
-sns.set_style('whitegrid')
+# configurar o estilo do gráfico
+sns.set_style('darkgrid')#alterei o estilo de 'whitegrid' para 'darkgrid'
 
-#criar a figura do gráfico
+# criar a figura do gráfico
 plt.figure(figsize=(10, 6))
 
-#gerar o gráfico de linha
-sns.lineplot(x='dia', y='venda', data=df, marker='o')
+# gerar o gráfico de linha
+sns.lineplot(x='dia', y='venda', data=df, marker='*')#alterei 'o' por '*'
 
-#configurar o título e os rótulos
-plt.title('Preço da gasolina por dia', fontsize=14)
+# configurar o título e os rótulos
+plt.title('Preço da gasolina por dia atualizado', fontsize=14)
 plt.xlabel('Dia', fontsize=12)
 plt.ylabel('Preço (R$)', fontsize=12)
 
-#ajustar o layout para melhor visualização
+# ajustar o layout para melhor visualização
 plt.tight_layout()
 
-#salva o gráfico como uma imagem PNG
+# salva o gráfico como uma imagem PNG
 plt.savefig('gasolina.png')
 plt.show()
